@@ -164,6 +164,7 @@ object PolymorphicFunctions {
 
   // Exercise 2: Implement a polymorphic function to check whether
   // an `Array[A]` is sorted
+  @annotation.tailrec
   def isSorted[A](as: Array[A], gt: (A,A) => Boolean): Boolean =
     if (as.length == 2) {
       val secondToLast = as.head
